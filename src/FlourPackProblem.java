@@ -41,13 +41,13 @@ public class FlourPackProblem {
     }
 
     public static boolean canPack(int bigCount, int smallCount, int goal) {
-        int bigCountTotal = bigCount * 5;
+        bigCount *= 5;
 
         if (bigCount < 0 || smallCount < 0 || goal < 0 ||
-                smallCount == 0 && bigCountTotal > goal) {
+                smallCount == 0 && bigCount> goal) {
             return false;
         }
-        if (bigCountTotal + smallCount < goal) {
+        if (bigCount + smallCount < goal) {
             return false;
         }
 
